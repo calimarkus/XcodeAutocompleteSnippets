@@ -8,8 +8,7 @@ And you're ready to go.
 
 ## Snippet Descriptions
 
-(created with .generateDescription.py)
-
+(generated with .generateDescription.py)
 
 **allocInit.codesnippet**  (Initalize an object)  
 Shortcut: `alloc`  
@@ -92,9 +91,9 @@ Pushes a newly created ViewController on the current NavigationController
     <#UIViewController#>* viewController = [[<#UIViewController#> alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
 
-**stringWithFormat.codesnippet**  (Format a string)  
+**stringWithFormat.codesnippet**  (Formatted String)  
 Shortcut: `format`  
-Formats a string
+Shortcut for a formatted string
 
-    [NSString stringWithFormat: @"<#formatString#>"]
+    [NSString stringWithFormat: @"<#string#>", <#param1#>]
 

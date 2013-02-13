@@ -2,7 +2,9 @@ from xml.dom import minidom
 import os
 import glob
 
-file = open('description.md', 'w')
+file = open('readme.md', 'w')
+file.write('# CodeSnippets\n\nThese are my Xcode 4 CodeSnippets. Just check them out into the following path:\n\n')
+file.write('`~/Library/Developer/Xcode/UserData/CodeSnippets`\n\nAnd you\'re ready to go.\n\n')
 file.write('## Snippet Descriptions\n\n(generated with .generateDescription.py)\n\n')
 
 listing = os.listdir(".")
@@ -41,3 +43,4 @@ for fileName in listing:
     file.write('    ' + contents.replace('\n', '\n    ') + '\n\n')
 
 file.close()
+
