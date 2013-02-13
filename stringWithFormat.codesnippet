@@ -9,15 +9,15 @@
 		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[NSString stringWithFormat: @"&lt;#formatString#&gt;"]</string>
+	<string>[NSString stringWithFormat: @"&lt;#string#&gt;", &lt;#param1#&gt;]</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8452EABE-3F89-42ED-84BE-7CC08FAEB891</string>
+	<string>1A2B60C4-C423-44D3-BD71-9834D7CEC64A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Formats a string</string>
+	<string>Shortcut for a formatted string</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Format a string</string>
+	<string>Formatted String</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
