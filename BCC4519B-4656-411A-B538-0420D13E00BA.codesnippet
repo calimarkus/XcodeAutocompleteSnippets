@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>tablecell</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// create / dequeue cell
+static NSString* identifier = @"&lt;#identifier#&gt;";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[&lt;#UITableViewCell#&gt; alloc] initWithStyle:&lt;#UITableViewCellStyleSubtitle#&gt; reuseIdentifier:identifier];
+    }
+    
+    return cell;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BCC4519B-4656-411A-B538-0420D13E00BA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Initialises / deques a new cell from the tableview using an identifier</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create a reusable TableCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
