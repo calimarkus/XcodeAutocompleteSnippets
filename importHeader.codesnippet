@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>alloc</string>
+	<string>imp1</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>Preprocessor</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#variable#&gt; = [[&lt;#ClassName#&gt; alloc] init];</string>
+	<string>#import "&lt;#header#&gt;"</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1784BA4B-5292-4062-8955-AE56D450F89A</string>
+	<string>0F3328D5-E457-4A29-ACB0-732B5943970D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>creates a new object from a given class</string>
+	<string>Import a header</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Initalize an object</string>
+	<string>Import header</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

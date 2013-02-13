@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>imp2</string>
+	<string>alloc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>Preprocessor</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#import &lt;&lt;#header#&gt;&gt;</string>
+	<string>&lt;#ClassName#&gt; *&lt;#variableName#&gt; = [[&lt;#ClassName#&gt; alloc] init];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7AF634F1-C9E8-427C-BD00-39EDA1E4DEB1</string>
+	<string>1784BA4B-5292-4062-8955-AE56D450F89A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>import a framework</string>
+	<string>creates a new object from a given class</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Import Framework</string>
+	<string>Initalize an object</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
