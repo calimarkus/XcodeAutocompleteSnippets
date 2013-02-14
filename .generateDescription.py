@@ -2,6 +2,8 @@ from xml.dom import minidom
 import os
 import glob
 
+print ">> Updating README.md based on .codesnippet files"
+
 file = open('README.md', 'w')
 file.write('# CodeSnippets\n\nThese are my Xcode 4 CodeSnippets. Just clone them into the following path:  \n')
 file.write('The folder must be empty, to clone the repository directly in it.\n\n')
