@@ -6,7 +6,7 @@
 	<string>imp2</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>Preprocessor</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#import &lt;&lt;#header#&gt;&gt;</string>
