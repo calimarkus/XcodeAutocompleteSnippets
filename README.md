@@ -45,6 +45,12 @@ A For loop incrementing a local variable
         <#statements#>
     }
 
+**imageView.codesnippet**  (Create an imageView)  
+Shortcut: `iv`  
+Inits a new imageView with an image via imageNamed.
+
+    [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
+
 **importFramework.codesnippet**  (Import Framework)  
 Shortcut: `imp2`  
 import a framework
