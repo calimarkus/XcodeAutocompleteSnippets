@@ -2,9 +2,12 @@ from xml.dom import minidom
 import os
 import glob
 
-file = open('readme.md', 'w')
-file.write('# CodeSnippets\n\nThese are my Xcode 4 CodeSnippets. Just check them out into the following path:\n\n')
-file.write('`~/Library/Developer/Xcode/UserData/CodeSnippets`\n\nAnd you\'re ready to go.\n\n')
+file = open('README.md', 'w')
+file.write('# CodeSnippets\n\nThese are my Xcode 4 CodeSnippets. Just clone them into the following path:  \n')
+file.write('The folder must be empty, to clone the repository directly in it.\n\n')
+file.write('    cd ~/Library/Developer/Xcode/UserData/CodeSnippets\n')
+file.write('    git clone git@github.com:jaydee3/CodeSnippets.git .\n\n')
+file.write('And you\'re ready to go.\n\n')
 file.write('## Snippet Descriptions\n\n(generated with .generateDescription.py)\n\n')
 
 listing = os.listdir(".")
