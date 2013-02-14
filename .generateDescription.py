@@ -5,10 +5,10 @@ import glob
 print ">> Updating README.md based on .codesnippet files"
 
 file = open('README.md', 'w')
-file.write('# CodeSnippets\n\nThese are my Xcode 4 CodeSnippets. Just clone them into the following path:  \n')
+file.write('# CodeSnippets\n\nThese are some useful Xcode 4 CodeSnippets. Just clone them into the following path:  \n')
 file.write('The folder must be empty, to clone the repository directly in it.\n\n')
 file.write('    cd ~/Library/Developer/Xcode/UserData/CodeSnippets\n')
-file.write('    git clone git@github.com:jaydee3/CodeSnippets.git .\n\n')
+file.write('    git clone git@github.com:nxtbgthng/CodeSnippets.git .\n\n')
 file.write('And you\'re ready to go.\n\n')
 file.write('## Snippet Descriptions\n\n(generated with .generateDescription.py)\n\n')
 

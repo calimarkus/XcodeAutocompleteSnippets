@@ -1,10 +1,10 @@
 # CodeSnippets
 
-These are my Xcode 4 CodeSnippets. Just clone them into the following path:  
+These are some useful Xcode 4 CodeSnippets. Just clone them into the following path:  
 The folder must be empty, to clone the repository directly in it.
 
     cd ~/Library/Developer/Xcode/UserData/CodeSnippets
-    git clone git@github.com:jaydee3/CodeSnippets.git .
+    git clone git@github.com:nxtbgthng/CodeSnippets.git .
 
 And you're ready to go.
 
