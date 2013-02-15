@@ -5,12 +5,18 @@ import glob
 print ">> Updating README.md based on .codesnippet files"
 
 file = open('README.md', 'w')
-file.write('# CodeSnippets\n\nThese are my Xcode 4 CodeSnippets. Just clone them into the following path:  \n')
-file.write('The folder must be empty, to clone the repository directly in it.\n\n')
+file.write('# CodeSnippets\n\n')
+file.write('These are my Xcode 4 CodeSnippets.  \n')
+file.write('To use them, clone this repository into the following path:\n\n')
 file.write('    cd ~/Library/Developer/Xcode/UserData/CodeSnippets\n')
 file.write('    git clone git@github.com:jaydee3/CodeSnippets.git .\n\n')
+file.write('(The folder must be empty, to clone the repository directly in it.)  \n')
 file.write('And you\'re ready to go.\n\n')
-file.write('## Snippet Descriptions\n\n(generated with .generateDescription.py)\n\n')
+file.write('#### Installing the pre-commit hook  \n')
+file.write('This README is generated automatically using `.generateDescription.py`.  \n')
+file.write('To run this script automatically before each commit, install the pre-commit hook like this:\n\n')
+file.write('    sh .install-precommit-hook.sh\n\n')
+file.write('## Snippet Descriptions\n\n')
 
 listing = os.listdir(".")
 for fileName in listing:

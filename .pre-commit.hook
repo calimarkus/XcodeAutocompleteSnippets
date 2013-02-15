@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# generate documentation, before commiting
+# this will update the readme.md
+#
+
+python .generateDescription.py
+git add README.md
+

@@ -1,16 +1,21 @@
 # CodeSnippets
 
-These are my Xcode 4 CodeSnippets. Just clone them into the following path:  
-The folder must be empty, to clone the repository directly in it.
+These are my Xcode 4 CodeSnippets.  
+To use them, clone this repository into the following path:
 
     cd ~/Library/Developer/Xcode/UserData/CodeSnippets
     git clone git@github.com:jaydee3/CodeSnippets.git .
 
+(The folder must be empty, to clone the repository directly in it.)  
 And you're ready to go.
 
-## Snippet Descriptions
+#### Installing the pre-commit hook  
+This README is generated automatically using `.generateDescription.py`.  
+To run this script automatically before each commit, install the pre-commit hook like this:
 
-(generated with .generateDescription.py)
+    sh .install-precommit-hook.sh
+
+## Snippet Descriptions
 
 **allocInit.codesnippet**  (Initalize an object)  
 Shortcut: `alloc`  
