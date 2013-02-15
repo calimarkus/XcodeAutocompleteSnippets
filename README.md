@@ -17,19 +17,24 @@ To run this script automatically before each commit, install the pre-commit hook
 
 ## Snippet Descriptions
 
-**allocInit.codesnippet**  (Initalize an object)  
-Shortcut: `alloc`  
-creates a new object from a given class
+**createAndShowAUialertview.codesnippet**  (Create & show a UIAlertView)  
+Shortcut: `alertview`  
+Shows a newly created alertview
 
-    <#ClassName#> *<#variableName#> = [[<#ClassName#> alloc] init];
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle: <#title#>
+                                                            message: <#message#>
+                                                           delegate: <#self#>
+                                                  cancelButtonTitle: <#nil#>
+                                                  otherButtonTitles: <#@"OK"#>, nil];
+        [alertView show];
 
-**autoresizingMask.codesnippet**  (Setup autoresizing of a view)  
-Shortcut: `autoresizing`  
-Set the autoresizing flags of a view
+**createAnImageview.codesnippet**  (Create an imageView)  
+Shortcut: `iv`  
+Inits a new imageView with an image via imageNamed.
 
-    <#view#>.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
 
-**dequeueTableCell.codesnippet**  (Create a reusable TableCell)  
+**createAReusableTablecell.codesnippet**  (Create a reusable TableCell)  
 Shortcut: `tablecell`  
 Initialises / deques a new cell from the tableview using an identifier
 
@@ -42,19 +47,11 @@ Initialises / deques a new cell from the tableview using an identifier
         
         return cell;
 
-**fori-loop.codesnippet**  (Incrementing For Loop)  
-Shortcut: `fori`  
-A For loop incrementing a local variable
+**formattedString.codesnippet**  (Formatted String)  
+Shortcut: `format`  
+Shortcut for a formatted string
 
-    for (NSInteger i=0; i<<#count#>; i++) {
-        <#statements#>
-    }
-
-**imageView.codesnippet**  (Create an imageView)  
-Shortcut: `iv`  
-Inits a new imageView with an image via imageNamed.
-
-    [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
+    [NSString stringWithFormat: @"<#string#>", <#param1#>]
 
 **importFramework.codesnippet**  (Import Framework)  
 Shortcut: `imp2`  
@@ -68,45 +65,48 @@ Import a header
 
     #import "<#header#>"
 
-**Localizable-keyValue.codesnippet**  (Key-Value Pair for Localization)  
+**incrementingForLoop.codesnippet**  (Incrementing For Loop)  
+Shortcut: `fori`  
+A For loop incrementing a local variable
+
+    for (NSInteger i=0; i<<#count#>; i++) {
+        <#statements#>
+    }
+
+**initalizeAnObject.codesnippet**  (Initalize an object)  
+Shortcut: `alloc`  
+creates a new object from a given class
+
+    <#ClassName#> *<#variableName#> = [[<#ClassName#> alloc] init];
+
+**keyValuePairForLocalization.codesnippet**  (Key-Value Pair for Localization)  
 Shortcut: `key`  
 A localization key and its value
 
     "<#keyName#>" = "<#value#>";
 
-**NSLocalizedString.codesnippet**  (Localize a string)  
+**localizeAString.codesnippet**  (Localize a string)  
 Shortcut: `loca`  
 Localizes a string from a given key
 
     NSLocalizedString(@"<#keyName#>", nil)
 
-**pragma-mark.codesnippet**  (Pragma mark)  
+**pragmaMark.codesnippet**  (Pragma mark)  
 Shortcut: `pragma`  
 Add a new pragma mark
 
     #pragma mark <#comment#>
 
-**presentAlertView.codesnippet**  (Create & show a UIAlertView)  
-Shortcut: `alertview`  
-Shows a newly created alertview
-
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle: <#title#>
-                                                            message: <#message#>
-                                                           delegate: <#self#>
-                                                  cancelButtonTitle: <#nil#>
-                                                  otherButtonTitles: <#@"OK"#>, nil];
-        [alertView show];
-
-**pushController.codesnippet**  (Push a ViewController)  
+**pushAViewcontroller.codesnippet**  (Push a ViewController)  
 Shortcut: `push`  
 Pushes a newly created ViewController on the current NavigationController
 
     <#UIViewController#>* viewController = [[<#UIViewController#> alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
 
-**stringWithFormat.codesnippet**  (Formatted String)  
-Shortcut: `format`  
-Shortcut for a formatted string
+**setupAutoresizingOfAView.codesnippet**  (Setup autoresizing of a view)  
+Shortcut: `autoresizing`  
+Set the autoresizing flags of a view
 
-    [NSString stringWithFormat: @"<#string#>", <#param1#>]
+    <#view#>.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
