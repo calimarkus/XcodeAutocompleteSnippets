@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# generate documentation, before commiting
+# this will update the readme.md
+#
+
+# rename snippets
+python .renameSnippets.py
+
+# generate description
+python .generateDescription.py
+
+# stage updates files 
+git add -A
+
