@@ -53,6 +53,14 @@ Shortcut for a formatted string
 
     [NSString stringWithFormat: @"<#string#>", <#param1#>]
 
+**getDocumentsDirectory.codesnippet**  (Get Documents directory)  
+Shortcut: `documents`  
+Create path to documents directory
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"<#fileName#>"];
+
 **importFramework.codesnippet**  (Import Framework)  
 Shortcut: `imp2`  
 import a framework
