@@ -17,6 +17,12 @@ To run this script automatically before each commit, install the pre-commit hook
 
 ## Snippet Descriptions
 
+**blockSafeSelfPointer.codesnippet**  (Block safe self pointer)  
+Shortcut: `blockSelf`  
+A weak pointer to self (for usage in blocks).
+
+    __weak typeof(self) blockSelf = self;
+
 **createAndShowAUialertview.codesnippet**  (Create & show a UIAlertView)  
 Shortcut: `alertview`  
 Shows a newly created alertview
