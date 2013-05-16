@@ -18,7 +18,7 @@ To run this script automatically before each commit, install the pre-commit hook
 ## Snippet Descriptions
 
 **blockSafeSelfPointer.codesnippet**  (Block safe self pointer)  
-Shortcut: `blockSelf`  
+Shortcut: `bs`  
 A weak pointer to self (for usage in blocks).
 
     __weak typeof(self) blockSelf = self;
