@@ -27,11 +27,11 @@ A weak pointer to self (for usage in blocks).
 Shortcut: `alertview`  
 Shows a newly created alertview
 
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle: <#title#>
-                                                            message: <#message#>
-                                                           delegate: <#self#>
-                                                  cancelButtonTitle: <#nil#>
-                                                  otherButtonTitles: <#@"OK"#>, nil];
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:<#title#>
+                                                            message:<#message#>
+                                                           delegate:<#self#>
+                                                  cancelButtonTitle:<#nil#>
+                                                  otherButtonTitles:<#@"OK"#>, nil];
         [alertView show];
 
 **createAnImageview.codesnippet**  (Create an imageView)  
@@ -123,4 +123,18 @@ Shortcut: `autoresizing`
 Set the autoresizing flags of a view
 
     <#view#>.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+**singleton.codesnippet**  (singleton)  
+Shortcut: `singleton`  
+A singleton implementation using dispatch_once
+
+    + (instancetype)><#sharedInstance#> {
+        static id <#_sharedInstance#> = nil;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            <#_sharedInstance#> = [[self alloc] init];
+        });
+    
+        return <#_sharedInstance#>;
+    }
 

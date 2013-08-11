@@ -9,11 +9,11 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIAlertView* alertView = [[UIAlertView alloc] initWithTitle: &lt;#title#&gt;
-                                                        message: &lt;#message#&gt;
-                                                       delegate: &lt;#self#&gt;
-                                              cancelButtonTitle: &lt;#nil#&gt;
-                                              otherButtonTitles: &lt;#@"OK"#&gt;, nil];
+	<string>UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:&lt;#title#&gt;
+                                                        message:&lt;#message#&gt;
+                                                       delegate:&lt;#self#&gt;
+                                              cancelButtonTitle:&lt;#nil#&gt;
+                                              otherButtonTitles:&lt;#@"OK"#&gt;, nil];
     [alertView show];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>EFD9530A-AAC7-4FCF-9625-855297B6B009</string>
