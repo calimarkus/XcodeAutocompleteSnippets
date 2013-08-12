@@ -17,6 +17,16 @@ To run this script automatically before each commit, install the pre-commit hook
 
 ## Snippet Descriptions
 
+**addAChildViewcontroller.codesnippet**  (Add a child ViewController)  
+Shortcut: `childController`  
+Adds a child ViewController to self
+
+    UIViewController *newController = <#newController#>;
+        [newController willMoveToParentViewController:self];
+        [self addChildViewController:newController];
+        [self.contentView addSubview:newController.view];
+        [newController didMoveToParentViewController:self];
+
 **blockSafeSelfPointer.codesnippet**  (Block safe self pointer)  
 Shortcut: `bs`  
 A weak pointer to self (for usage in blocks).
