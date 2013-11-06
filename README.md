@@ -37,12 +37,11 @@ A weak pointer to self (for usage in blocks).
 Shortcut: `alertview`  
 Shows a newly created alertview
 
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:<#title#>
-                                                            message:<#message#>
-                                                           delegate:<#self#>
-                                                  cancelButtonTitle:<#nil#>
-                                                  otherButtonTitles:<#@"OK"#>, nil];
-        [alertView show];
+    [[[UIAlertView alloc] initWithTitle:<#title#>
+                                message:<#message#>
+                               delegate:<#self#>
+                      cancelButtonTitle:<#nil#>
+                      otherButtonTitles:<#nil#>] show];
 
 **createAnImageview.codesnippet**  (Create an imageView)  
 Shortcut: `iv`  
@@ -62,6 +61,14 @@ Initialises / deques a new cell from the tableview using an identifier
         }
         
         return cell;
+
+**decrementingForLoop.codesnippet**  (Decrementing For Loop)  
+Shortcut: `fori`  
+A For Loop decrementing a local variable
+
+    for (NSInteger i=<#startValue#>; i><#count#>; i--) {
+        <#statements#>
+    }
 
 **formattedString.codesnippet**  (Formatted String)  
 Shortcut: `format`  
@@ -138,7 +145,7 @@ Set the autoresizing flags of a view
 Shortcut: `singleton`  
 A singleton implementation using dispatch_once
 
-    + (instancetype)><#sharedInstance#> {
+    + (instancetype)<#sharedInstance#> {
         static id <#_sharedInstance#> = nil;
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
