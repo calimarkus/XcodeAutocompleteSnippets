@@ -9,14 +9,14 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (instancetype)&lt;#sharedInstance#&gt; {
-    static id &lt;#_sharedInstance#&gt; = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&amp;onceToken, ^{
-        &lt;#_sharedInstance#&gt; = [[self alloc] init];
-    });
-
-    return &lt;#_sharedInstance#&gt;;
+	<string>+ (instancetype)sharedInstance
+{
+  static id _sharedInstance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&amp;onceToken, ^{
+    _sharedInstance = [[self alloc] initSharedInstance];
+  });
+  return _sharedInstance;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4526AE01-3248-432C-B56F-C7E4CEB74468</string>

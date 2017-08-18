@@ -28,12 +28,6 @@ Adds a child ViewController to self
         [self.contentView addSubview:newController.view];
         [newController didMoveToParentViewController:self];
 
-**blockSafeSelfPointer.codesnippet**  (Block safe self pointer)  
-Shortcut: `bs`  
-A weak pointer to self (for usage in blocks).
-
-    __weak typeof(self) blockSelf = self;
-
 **createAndShowAUialertview.codesnippet**  (Create & show a UIAlertView)  
 Shortcut: `alertview`  
 Shows a newly created alertview
@@ -75,7 +69,7 @@ A For Loop decrementing a local variable
 Shortcut: `format`  
 Shortcut for a formatted string
 
-    [NSString stringWithFormat: @"<#string#>", <#param1#>]
+    [NSString stringWithFormat:@"<#string#>", <#param1#>]
 
 **getDocumentsDirectory.codesnippet**  (Get Documents directory)  
 Shortcut: `documents`  
@@ -146,13 +140,25 @@ Set the autoresizing flags of a view
 Shortcut: `singleton`  
 A singleton implementation using dispatch_once
 
-    + (instancetype)<#sharedInstance#> {
-        static id <#_sharedInstance#> = nil;
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            <#_sharedInstance#> = [[self alloc] init];
-        });
-    
-        return <#_sharedInstance#>;
+    + (instancetype)sharedInstance
+    {
+      static id _sharedInstance = nil;
+      static dispatch_once_t onceToken;
+      dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc] initSharedInstance];
+      });
+      return _sharedInstance;
     }
+
+**strongSelfPointer.codesnippet**  (Strong self pointer)  
+Shortcut: `ss`  
+A strong pointer to self (for usage in blocks).
+
+    __strong __typeof(weakSelf) strongSelf = weakSelf;
+
+**weakSelfPointer.codesnippet**  (Weak self pointer)  
+Shortcut: `ws`  
+A weak pointer to self (for usage in blocks).
+
+    __weak __typeof(self) weakSelf = self;
 

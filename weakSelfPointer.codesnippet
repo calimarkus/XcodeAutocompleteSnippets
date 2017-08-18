@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>format</string>
+	<string>ws</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[NSString stringWithFormat:@"&lt;#string#&gt;", &lt;#param1#&gt;]</string>
+	<string>__weak __typeof(self) weakSelf = self;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A2B60C4-C423-44D3-BD71-9834D7CEC64A</string>
+	<string>24284883-3E68-419A-98ED-D4A22D19C453</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Shortcut for a formatted string</string>
+	<string>A weak pointer to self (for usage in blocks).</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Formatted String</string>
+	<string>Weak self pointer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
