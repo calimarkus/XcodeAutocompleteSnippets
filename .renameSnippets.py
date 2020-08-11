@@ -12,8 +12,8 @@ count = 0
 listing = os.listdir(".")
 for fileName in listing:
     
-    # ignore other files than snippets
-    if not fileName.endswith(".codesnippet"):
+    # ignore other files than snippets & ignore focus ones
+    if fileName.startswith("focus_") or not fileName.endswith(".codesnippet"):
     	continue
 
     # parse snippet file
@@ -27,14 +27,14 @@ for fileName in listing:
 
     snippetTitle = None
 
-    # find title
+    # prase snippet title
     for key in keyslist:
     	value = key.firstChild.nodeValue
     	if value == "IDECodeSnippetTitle":
     		snippetTitle = allChilds[allChilds.index(key)+1].firstChild.nodeValue
 
     # if snippet has a title
-    if not snippetTitle == None:
+    if snippetTitle is not None:
 
       # build filename (only a-zA-Z)
       snippetTitle = snippetTitle.replace("&","and")

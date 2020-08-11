@@ -18,12 +18,17 @@ file.write('To run this script automatically before each commit, install the pre
 file.write('    sh .install-precommit-hook.sh\n\n')
 file.write('## Snippet Descriptions\n\n')
 
+# get all filenames and sort by name
 listing = os.listdir(".")
+listing.sort()
+
 for fileName in listing:
     
-    if not fileName.endswith(".codesnippet"):
+    # ignore other files than snippets & ignore focus ones
+    if fileName.startswith("focus_") or not fileName.endswith(".codesnippet"):
     	continue
 
+    # parse snippet file
     xmldoc = minidom.parse(fileName)
     keyslist = xmldoc.getElementsByTagName('key')
     allChilds = xmldoc.getElementsByTagName('dict')[0].childNodes
@@ -37,6 +42,7 @@ for fileName in listing:
     shortcut=""
     contents=""
 
+    # parse relevant fields
     for key in keyslist:
     	value = key.firstChild.nodeValue
     	if (value == "IDECodeSnippetCompletionPrefix"):
@@ -48,6 +54,7 @@ for fileName in listing:
     	elif value == "IDECodeSnippetTitle":
     		title    = allChilds[allChilds.index(key)+1].firstChild.nodeValue
 
+    # write snippet description to README.md
     file.write('**' + fileName + '**  (' + title + ')  \n')
     file.write('Shortcut: `' + shortcut + '`  \n')
     file.write(summary + '\n\n')

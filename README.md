@@ -28,22 +28,6 @@ Adds a child ViewController to self
         [self.contentView addSubview:newController.view];
         [newController didMoveToParentViewController:self];
 
-**createAndShowAUialertview.codesnippet**  (Create & show a UIAlertView)  
-Shortcut: `alertview`  
-Shows a newly created alertview
-
-    [[[UIAlertView alloc] initWithTitle:<#title#>
-                                message:<#message#>
-                               delegate:<#self#>
-                      cancelButtonTitle:<#nil#>
-                      otherButtonTitles:<#nil#>] show];
-
-**createAnImageview.codesnippet**  (Create an imageView)  
-Shortcut: `iv`  
-Inits a new imageView with an image via imageNamed.
-
-    [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
-
 **createAReusableTablecell.codesnippet**  (Create a reusable TableCell)  
 Shortcut: `tablecell`  
 Initialises / deques a new cell from the tableview using an identifier
@@ -56,6 +40,22 @@ Initialises / deques a new cell from the tableview using an identifier
         }
         
         return cell;
+
+**createAnImageview.codesnippet**  (Create an imageView)  
+Shortcut: `iv`  
+Inits a new imageView with an image via imageNamed.
+
+    [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
+
+**createAndShowAUialertview.codesnippet**  (Create & show a UIAlertView)  
+Shortcut: `alertview`  
+Shows a newly created alertview
+
+    [[[UIAlertView alloc] initWithTitle:<#title#>
+                                message:<#message#>
+                               delegate:<#self#>
+                      cancelButtonTitle:<#nil#>
+                      otherButtonTitles:<#nil#>] show];
 
 **decrementingForLoop.codesnippet**  (Decrementing For Loop)  
 Shortcut: `fori`  
