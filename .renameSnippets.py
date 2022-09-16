@@ -6,7 +6,7 @@ import re
 # define first character lowercase function
 first_lower = lambda s: s[:1].lower() + s[1:] if s else ''
 
-print "Updating codesnippet filenames with their actual titles"
+print("Updating codesnippet filenames with their actual titles")
 
 count = 0
 listing = os.listdir(".")
@@ -49,11 +49,11 @@ for fileName in listing:
         count = count + 1
 
         # log renamed files
-        print " renamed: " + fileName + " -> "
-        print "          " + newName
+        print(" renamed: " + fileName + " -> ")
+        print("          " + newName)
 
 # show total count
-print str(count) + " snippets renamed."
+print(str(count) + " snippets renamed.")
 
 
 

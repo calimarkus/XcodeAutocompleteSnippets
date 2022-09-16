@@ -2,7 +2,7 @@ from xml.dom import minidom
 import os
 import glob
 
-print ">> Updating README.md based on .codesnippet files"
+print (">> Updating README.md based on .codesnippet files")
 
 file = open('README.md', 'w')
 file.write('# CodeSnippets\n\n')
