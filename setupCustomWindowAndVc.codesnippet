@@ -3,21 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ss</string>
+	<string>setwin</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) strongSelf = weakSelf;</string>
+	<string>window = UIWindow(windowScene: scene)
+window?.rootViewController = UINavigationController(rootViewController: &lt;#ViewController#&gt;)
+window?.makeKeyAndVisible()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>571DDCD9-B6E4-4810-991D-14E984532AAB</string>
+	<string>1D68C65B-9C5E-45F0-A518-8777CA79A44A</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>A strong pointer to self (for usage in blocks).</string>
+	<string>Create window and rootVC</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong self pointer</string>
+	<string>Setup custom window &amp; VC</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

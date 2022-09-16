@@ -79,6 +79,12 @@ Create path to documents directory
         NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"<#fileName#>"];
 
+**guardWeakSelf.codesnippet**  (Guard Weak Self)  
+Shortcut: `ws`  
+Guard weak self to exist
+
+    guard let self = self else { return <#returnValue#> }
+
 **importFramework.codesnippet**  (Import Framework)  
 Shortcut: `imp2`  
 import a framework
@@ -135,6 +141,14 @@ Shortcut: `autoresizing`
 Set the autoresizing flags of a view
 
     <#view#>.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+**setupCustomWindowAndVc.codesnippet**  (Setup custom window & VC)  
+Shortcut: `setwin`  
+Create window and rootVC
+
+    window = UIWindow(windowScene: scene)
+    window?.rootViewController = UINavigationController(rootViewController: <#ViewController#>)
+    window?.makeKeyAndVisible()
 
 **singleton.codesnippet**  (singleton)  
 Shortcut: `singleton`  

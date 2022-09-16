@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ss</string>
+	<string>ws</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) strongSelf = weakSelf;</string>
+	<string>guard let self = self else { return &lt;#returnValue#&gt; }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>571DDCD9-B6E4-4810-991D-14E984532AAB</string>
+	<string>7C61BE4D-1B02-4B39-86D6-C0258A76FABC</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>A strong pointer to self (for usage in blocks).</string>
+	<string>Guard weak self to exist</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong self pointer</string>
+	<string>Guard Weak Self</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
