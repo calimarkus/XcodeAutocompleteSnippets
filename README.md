@@ -4,9 +4,11 @@ These are my Xcode CodeSnippets.
 To use them, clone this repository into the following path:  
 (The folder must be empty, to clone the repository directly in it.)  
 
-    cd ~/Library/Developer/Xcode/UserData/CodeSnippets
-    git clone git@github.com:jaydee3/CodeSnippets.git .
+```sh
+cd ~/Library/Developer/Xcode/UserData/CodeSnippets
+git clone git@github.com:jaydee3/CodeSnippets.git .
 
+```
 And you're ready to go.
 
 #### Installing the pre-commit hook  
@@ -14,186 +16,251 @@ And you're ready to go.
 This README is generated automatically using `.generateDescription.py`.  
 To run this script automatically before each commit, install the pre-commit hook like this:
 
-    sh .install-precommit-hook.sh
+```sh
+sh .install-precommit-hook.sh
 
+```
 ## Snippet Descriptions
 
-**objc_addAChildViewcontroller.codesnippet**  (Add a child ViewController)  
-Language: `Obj-C`  
-Shortcut: `childController`  
+**Add a child ViewController**  
 Adds a child ViewController to self
 
-    UIViewController *newController = <#newController#>;
-        [newController willMoveToParentViewController:self];
-        [self addChildViewController:newController];
-        [self.contentView addSubview:newController.view];
-        [newController didMoveToParentViewController:self];
+Shortcut: `childController`  
+File: `objc_addAChildViewcontroller.codesnippet`  
 
-**objc_createAReusableTablecell.codesnippet**  (Create a reusable TableCell)  
-Language: `Obj-C`  
-Shortcut: `tablecell`  
+```Obj-C
+UIViewController *newController = <#newController#>;
+    [newController willMoveToParentViewController:self];
+    [self addChildViewController:newController];
+    [self.contentView addSubview:newController.view];
+    [newController didMoveToParentViewController:self];
+```
+
+**Create a reusable TableCell**  
 Initialises / deques a new cell from the tableview using an identifier
 
-    // create / dequeue cell
-    static NSString* identifier = @"<#identifier#>";
-        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-        if (cell == nil) {
-            cell = [[<#UITableViewCell#> alloc] initWithStyle:<#UITableViewCellStyleSubtitle#> reuseIdentifier:identifier];
-        }
-        
-        return cell;
+Shortcut: `tablecell`  
+File: `objc_createAReusableTablecell.codesnippet`  
 
-**objc_createAnImageview.codesnippet**  (Create an imageView)  
-Language: `Obj-C`  
-Shortcut: `iv`  
+```Obj-C
+// create / dequeue cell
+static NSString* identifier = @"<#identifier#>";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[<#UITableViewCell#> alloc] initWithStyle:<#UITableViewCellStyleSubtitle#> reuseIdentifier:identifier];
+    }
+    
+    return cell;
+```
+
+**Create an imageView**  
 Inits a new imageView with an image via imageNamed.
 
-    [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
+Shortcut: `iv`  
+File: `objc_createAnImageview.codesnippet`  
 
-**objc_createAndShowAUialertview.codesnippet**  (Create & show a UIAlertView)  
-Language: `Obj-C`  
-Shortcut: `alertview`  
+```Obj-C
+[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
+```
+
+**Create & show a UIAlertView**  
 Shows a newly created alertview
 
-    [[[UIAlertView alloc] initWithTitle:<#title#>
-                                message:<#message#>
-                               delegate:<#self#>
-                      cancelButtonTitle:<#nil#>
-                      otherButtonTitles:<#nil#>] show];
+Shortcut: `alertview`  
+File: `objc_createAndShowAUialertview.codesnippet`  
 
-**objc_decrementingForLoop.codesnippet**  (Decrementing For Loop)  
-Language: `Obj-C`  
-Shortcut: `fori`  
+```Obj-C
+[[[UIAlertView alloc] initWithTitle:<#title#>
+                            message:<#message#>
+                           delegate:<#self#>
+                  cancelButtonTitle:<#nil#>
+                  otherButtonTitles:<#nil#>] show];
+```
+
+**Decrementing For Loop**  
 A For Loop decrementing a local variable
 
-    for (NSInteger i=<#startValue#>; i><#count#>; i--) {
-        <#statements#>
-    }
+Shortcut: `fori`  
+File: `objc_decrementingForLoop.codesnippet`  
 
-**objc_formattedString.codesnippet**  (Formatted String)  
-Language: `Obj-C`  
-Shortcut: `format`  
+```Obj-C
+for (NSInteger i=<#startValue#>; i><#count#>; i--) {
+    <#statements#>
+}
+```
+
+**Formatted String**  
 Shortcut for a formatted string
 
-    [NSString stringWithFormat:@"<#string#>", <#param1#>]
+Shortcut: `format`  
+File: `objc_formattedString.codesnippet`  
 
-**objc_getDocumentsDirectory.codesnippet**  (Get Documents directory)  
-Language: `Obj-C`  
-Shortcut: `documents`  
+```Obj-C
+[NSString stringWithFormat:@"<#string#>", <#param1#>]
+```
+
+**Get Documents directory**  
 Create path to documents directory
 
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"<#fileName#>"];
+Shortcut: `documents`  
+File: `objc_getDocumentsDirectory.codesnippet`  
 
-**objc_importFramework.codesnippet**  (Import Framework)  
-Language: `Obj-C`  
-Shortcut: `imp2`  
+```Obj-C
+NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"<#fileName#>"];
+```
+
+**Import Framework**  
 import a framework
 
-    #import <<#header#>>
+Shortcut: `imp2`  
+File: `objc_importFramework.codesnippet`  
 
-**objc_importHeader.codesnippet**  (Import header)  
-Language: `Obj-C`  
-Shortcut: `imp1`  
+```Obj-C
+#import <<#header#>>
+```
+
+**Import header**  
 Import a header
 
-    #import "<#header#>"
+Shortcut: `imp1`  
+File: `objc_importHeader.codesnippet`  
 
-**objc_incrementingForLoop.codesnippet**  (Incrementing For Loop)  
-Language: `Obj-C`  
-Shortcut: `fori`  
+```Obj-C
+#import "<#header#>"
+```
+
+**Incrementing For Loop**  
 A For loop incrementing a local variable
 
-    for (NSInteger i=0; i<<#count#>; i++) {
-        <#statements#>
-    }
+Shortcut: `fori`  
+File: `objc_incrementingForLoop.codesnippet`  
 
-**objc_initalizeAnObject.codesnippet**  (Initalize an object)  
-Language: `Obj-C`  
-Shortcut: `alloc`  
+```Obj-C
+for (NSInteger i=0; i<<#count#>; i++) {
+    <#statements#>
+}
+```
+
+**Initalize an object**  
 creates a new object from a given class
 
-    <#ClassName#> *<#variableName#> = [[<#ClassName#> alloc] init];
+Shortcut: `alloc`  
+File: `objc_initalizeAnObject.codesnippet`  
 
-**objc_keyValuePairForLocalization.codesnippet**  (Key-Value Pair for Localization)  
-Language: `Obj-C`  
-Shortcut: `key`  
+```Obj-C
+<#ClassName#> *<#variableName#> = [[<#ClassName#> alloc] init];
+```
+
+**Key-Value Pair for Localization**  
 A localization key and its value
 
-    "<#keyName#>" = "<#value#>";
+Shortcut: `key`  
+File: `objc_keyValuePairForLocalization.codesnippet`  
 
-**objc_localizeAString.codesnippet**  (Localize a string)  
-Language: `Obj-C`  
-Shortcut: `loca`  
+```Obj-C
+"<#keyName#>" = "<#value#>";
+```
+
+**Localize a string**  
 Localizes a string from a given key
 
-    NSLocalizedString(@"<#keyName#>", nil)
+Shortcut: `loca`  
+File: `objc_localizeAString.codesnippet`  
 
-**objc_pragmaMark.codesnippet**  (Pragma mark)  
-Language: `Obj-C`  
-Shortcut: `pragma`  
+```Obj-C
+NSLocalizedString(@"<#keyName#>", nil)
+```
+
+**Pragma mark**  
 Add a new pragma mark
 
-    #pragma mark <#comment#>
+Shortcut: `pragma`  
+File: `objc_pragmaMark.codesnippet`  
 
-**objc_pushAViewcontroller.codesnippet**  (Push a ViewController)  
-Language: `Obj-C`  
-Shortcut: `push`  
+```Obj-C
+#pragma mark <#comment#>
+```
+
+**Push a ViewController**  
 Pushes a newly created ViewController on the current NavigationController
 
-    <#UIViewController#>* viewController = [[<#UIViewController#> alloc] init];
-        [self.navigationController pushViewController:viewController animated:YES];
+Shortcut: `push`  
+File: `objc_pushAViewcontroller.codesnippet`  
 
-**objc_setupAutoresizingOfAView.codesnippet**  (Setup autoresizing of a view)  
-Language: `Obj-C`  
-Shortcut: `autoresizing`  
+```Obj-C
+<#UIViewController#>* viewController = [[<#UIViewController#> alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+```
+
+**Setup autoresizing of a view**  
 Set the autoresizing flags of a view
 
-    <#view#>.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+Shortcut: `autoresizing`  
+File: `objc_setupAutoresizingOfAView.codesnippet`  
 
-**objc_singleton.codesnippet**  (singleton)  
-Language: `Obj-C`  
-Shortcut: `singleton`  
+```Obj-C
+<#view#>.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+```
+
+**singleton**  
 A singleton implementation using dispatch_once
 
-    + (instancetype)sharedInstance
-    {
-      static id _sharedInstance = nil;
-      static dispatch_once_t onceToken;
-      dispatch_once(&onceToken, ^{
-        _sharedInstance = [[self alloc] initSharedInstance];
-      });
-      return _sharedInstance;
-    }
+Shortcut: `singleton`  
+File: `objc_singleton.codesnippet`  
 
-**objc_strongSelfPointer.codesnippet**  (Strong self pointer)  
-Language: `Obj-C`  
-Shortcut: `ss`  
+```Obj-C
++ (instancetype)sharedInstance
+{
+  static id _sharedInstance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    _sharedInstance = [[self alloc] initSharedInstance];
+  });
+  return _sharedInstance;
+}
+```
+
+**Strong self pointer**  
 A strong pointer to self (for usage in blocks).
 
-    __strong __typeof(weakSelf) strongSelf = weakSelf;
+Shortcut: `ss`  
+File: `objc_strongSelfPointer.codesnippet`  
 
-**objc_weakSelfPointer.codesnippet**  (Weak self pointer)  
-Language: `Obj-C`  
-Shortcut: `ws`  
+```Obj-C
+__strong __typeof(weakSelf) strongSelf = weakSelf;
+```
+
+**Weak self pointer**  
 A weak pointer to self (for usage in blocks).
 
-    __weak __typeof(self) weakSelf = self;
-
-**swift_guardWeakSelf.codesnippet**  (Guard Weak Self)  
-Language: `Swift`  
 Shortcut: `ws`  
+File: `objc_weakSelfPointer.codesnippet`  
+
+```Obj-C
+__weak __typeof(self) weakSelf = self;
+```
+
+**Guard Weak Self**  
 Guard weak self to exist
 
-    guard let self = self else { return <#returnValue#> }
+Shortcut: `ws`  
+File: `swift_guardWeakSelf.codesnippet`  
 
-**swift_setupCustomWindowAndVc.codesnippet**  (Setup custom window & VC)  
-Language: `Swift`  
-Shortcut: `setwin`  
+```Swift
+guard let self = self else { return <#returnValue#> }
+```
+
+**Setup custom window & VC**  
 Create window and rootVC
 
-    window = UIWindow(windowScene: scene)
-    window?.rootViewController = UINavigationController(rootViewController: <#ViewController#>)
-    window?.makeKeyAndVisible()
+Shortcut: `setwin`  
+File: `swift_setupCustomWindowAndVc.codesnippet`  
+
+```Swift
+window = UIWindow(windowScene: scene)
+window?.rootViewController = UINavigationController(rootViewController: <#ViewController#>)
+window?.makeKeyAndVisible()
+```
 

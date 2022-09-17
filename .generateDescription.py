@@ -9,13 +9,17 @@ file.write('# CodeSnippets\n\n')
 file.write('These are my Xcode CodeSnippets.  \n')
 file.write('To use them, clone this repository into the following path:  \n')
 file.write('(The folder must be empty, to clone the repository directly in it.)  \n\n')
-file.write('    cd ~/Library/Developer/Xcode/UserData/CodeSnippets\n')
-file.write('    git clone git@github.com:jaydee3/CodeSnippets.git .\n\n')
+file.write('```sh\n')
+file.write('cd ~/Library/Developer/Xcode/UserData/CodeSnippets\n')
+file.write('git clone git@github.com:jaydee3/CodeSnippets.git .\n\n')
+file.write('```\n')
 file.write('And you\'re ready to go.\n\n')
 file.write('#### Installing the pre-commit hook  \n\n')
 file.write('This README is generated automatically using `.generateDescription.py`.  \n')
 file.write('To run this script automatically before each commit, install the pre-commit hook like this:\n\n')
-file.write('    sh .install-precommit-hook.sh\n\n')
+file.write('```sh\n')
+file.write('sh .install-precommit-hook.sh\n\n')
+file.write('```\n')
 file.write('## Snippet Descriptions\n\n')
 
 # get all filenames and sort by name
@@ -62,11 +66,11 @@ for fileName in listing:
                 lang = "Obj-C"
 
     # write snippet description to README.md
-    file.write('**' + fileName + '**  (' + title + ')  \n')
-    file.write('Language: `' + lang + '`  \n')
-    file.write('Shortcut: `' + shortcut + '`  \n')
+    file.write('**' + title + '**  \n')
     file.write(summary + '\n\n')
-    file.write('    ' + contents.replace('\n', '\n    ') + '\n\n')
+    file.write('Shortcut: `' + shortcut + '`  \n')
+    file.write('File: `' + fileName + '`  \n\n')
+    file.write('```' + lang + '\n' + contents + '\n```\n\n')
 
 file.close()
 
