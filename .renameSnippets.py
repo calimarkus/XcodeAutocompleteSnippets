@@ -14,7 +14,7 @@ for fileName in listing:
     
     # ignore other files than snippets & ignore focus ones
     if fileName.startswith("focus_") or not fileName.endswith(".codesnippet"):
-    	continue
+      continue
 
     # parse snippet file
     xmldoc = minidom.parse(fileName)
@@ -22,16 +22,20 @@ for fileName in listing:
     allChilds = xmldoc.getElementsByTagName('dict')[0].childNodes
 
     for x in allChilds:
-    	if not x.firstChild:
-    		allChilds.remove(x)
+      if not x.firstChild:
+        allChilds.remove(x)
 
     snippetTitle = None
+    lang = "objc"
 
     # prase snippet title
     for key in keyslist:
-    	value = key.firstChild.nodeValue
-    	if value == "IDECodeSnippetTitle":
-    		snippetTitle = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+      value = key.firstChild.nodeValue
+      if value == "IDECodeSnippetTitle":
+        snippetTitle = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+      elif value == "IDECodeSnippetLanguage":
+        if allChilds[allChilds.index(key)+1].firstChild.nodeValue.endswith("Swift"):
+          lang = "swift"
 
     # if snippet has a title
     if snippetTitle is not None:
@@ -41,7 +45,7 @@ for fileName in listing:
       allWords = re.findall("[a-zA-Z]+", snippetTitle)
       uppercaseWords = map(lambda x: x.title(), allWords)
       newName = "".join(uppercaseWords) + ".codesnippet"
-      newName = first_lower(newName)
+      newName = lang + "_" + first_lower(newName)
 
       # if name changed, rename file
       if not newName == fileName:
