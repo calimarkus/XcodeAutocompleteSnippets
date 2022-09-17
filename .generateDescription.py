@@ -26,7 +26,7 @@ for fileName in listing:
     
     # ignore other files than snippets & ignore focus ones
     if fileName.startswith("focus_") or not fileName.endswith(".codesnippet"):
-    	continue
+        continue
 
     # parse snippet file
     xmldoc = minidom.parse(fileName)
@@ -34,28 +34,36 @@ for fileName in listing:
     allChilds = xmldoc.getElementsByTagName('dict')[0].childNodes
 
     for x in allChilds:
-    	if not x.firstChild:
-    		allChilds.remove(x)
+        if not x.firstChild:
+            allChilds.remove(x)
 
     title=""
     summary=""
     shortcut=""
     contents=""
+    lang=""
 
     # parse relevant fields
     for key in keyslist:
-    	value = key.firstChild.nodeValue
-    	if (value == "IDECodeSnippetCompletionPrefix"):
-    		shortcut = allChilds[allChilds.index(key)+1].firstChild.nodeValue
-    	elif value == "IDECodeSnippetContents":
-    		contents = allChilds[allChilds.index(key)+1].firstChild.nodeValue
-    	elif value == "IDECodeSnippetSummary":
-    		summary  = allChilds[allChilds.index(key)+1].firstChild.nodeValue
-    	elif value == "IDECodeSnippetTitle":
-    		title    = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+        value = key.firstChild.nodeValue
+        if (value == "IDECodeSnippetCompletionPrefix"):
+            shortcut = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+        elif value == "IDECodeSnippetContents":
+            contents = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+        elif value == "IDECodeSnippetSummary":
+            summary = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+        elif value == "IDECodeSnippetTitle":
+            title = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+        elif value == "IDECodeSnippetLanguage":
+            langstr = allChilds[allChilds.index(key)+1].firstChild.nodeValue
+            if langstr.endswith("Swift"):
+                lang = "Swift"
+            else:
+                lang = "Obj-C"
 
     # write snippet description to README.md
     file.write('**' + fileName + '**  (' + title + ')  \n')
+    file.write('Language: `' + lang + '`  \n')
     file.write('Shortcut: `' + shortcut + '`  \n')
     file.write(summary + '\n\n')
     file.write('    ' + contents.replace('\n', '\n    ') + '\n\n')

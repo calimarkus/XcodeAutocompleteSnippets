@@ -19,6 +19,7 @@ To run this script automatically before each commit, install the pre-commit hook
 ## Snippet Descriptions
 
 **addAChildViewcontroller.codesnippet**  (Add a child ViewController)  
+Language: `Obj-C`  
 Shortcut: `childController`  
 Adds a child ViewController to self
 
@@ -29,6 +30,7 @@ Adds a child ViewController to self
         [newController didMoveToParentViewController:self];
 
 **createAReusableTablecell.codesnippet**  (Create a reusable TableCell)  
+Language: `Obj-C`  
 Shortcut: `tablecell`  
 Initialises / deques a new cell from the tableview using an identifier
 
@@ -42,12 +44,14 @@ Initialises / deques a new cell from the tableview using an identifier
         return cell;
 
 **createAnImageview.codesnippet**  (Create an imageView)  
+Language: `Obj-C`  
 Shortcut: `iv`  
 Inits a new imageView with an image via imageNamed.
 
     [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"<#imageName#>"]]
 
 **createAndShowAUialertview.codesnippet**  (Create & show a UIAlertView)  
+Language: `Obj-C`  
 Shortcut: `alertview`  
 Shows a newly created alertview
 
@@ -58,6 +62,7 @@ Shows a newly created alertview
                       otherButtonTitles:<#nil#>] show];
 
 **decrementingForLoop.codesnippet**  (Decrementing For Loop)  
+Language: `Obj-C`  
 Shortcut: `fori`  
 A For Loop decrementing a local variable
 
@@ -66,12 +71,14 @@ A For Loop decrementing a local variable
     }
 
 **formattedString.codesnippet**  (Formatted String)  
+Language: `Obj-C`  
 Shortcut: `format`  
 Shortcut for a formatted string
 
     [NSString stringWithFormat:@"<#string#>", <#param1#>]
 
 **getDocumentsDirectory.codesnippet**  (Get Documents directory)  
+Language: `Obj-C`  
 Shortcut: `documents`  
 Create path to documents directory
 
@@ -80,24 +87,28 @@ Create path to documents directory
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"<#fileName#>"];
 
 **guardWeakSelf.codesnippet**  (Guard Weak Self)  
+Language: `Swift`  
 Shortcut: `ws`  
 Guard weak self to exist
 
     guard let self = self else { return <#returnValue#> }
 
 **importFramework.codesnippet**  (Import Framework)  
+Language: `Obj-C`  
 Shortcut: `imp2`  
 import a framework
 
     #import <<#header#>>
 
 **importHeader.codesnippet**  (Import header)  
+Language: `Obj-C`  
 Shortcut: `imp1`  
 Import a header
 
     #import "<#header#>"
 
 **incrementingForLoop.codesnippet**  (Incrementing For Loop)  
+Language: `Obj-C`  
 Shortcut: `fori`  
 A For loop incrementing a local variable
 
@@ -106,30 +117,35 @@ A For loop incrementing a local variable
     }
 
 **initalizeAnObject.codesnippet**  (Initalize an object)  
+Language: `Obj-C`  
 Shortcut: `alloc`  
 creates a new object from a given class
 
     <#ClassName#> *<#variableName#> = [[<#ClassName#> alloc] init];
 
 **keyValuePairForLocalization.codesnippet**  (Key-Value Pair for Localization)  
+Language: `Obj-C`  
 Shortcut: `key`  
 A localization key and its value
 
     "<#keyName#>" = "<#value#>";
 
 **localizeAString.codesnippet**  (Localize a string)  
+Language: `Obj-C`  
 Shortcut: `loca`  
 Localizes a string from a given key
 
     NSLocalizedString(@"<#keyName#>", nil)
 
 **pragmaMark.codesnippet**  (Pragma mark)  
+Language: `Obj-C`  
 Shortcut: `pragma`  
 Add a new pragma mark
 
     #pragma mark <#comment#>
 
 **pushAViewcontroller.codesnippet**  (Push a ViewController)  
+Language: `Obj-C`  
 Shortcut: `push`  
 Pushes a newly created ViewController on the current NavigationController
 
@@ -137,12 +153,14 @@ Pushes a newly created ViewController on the current NavigationController
         [self.navigationController pushViewController:viewController animated:YES];
 
 **setupAutoresizingOfAView.codesnippet**  (Setup autoresizing of a view)  
+Language: `Obj-C`  
 Shortcut: `autoresizing`  
 Set the autoresizing flags of a view
 
     <#view#>.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
 **setupCustomWindowAndVc.codesnippet**  (Setup custom window & VC)  
+Language: `Swift`  
 Shortcut: `setwin`  
 Create window and rootVC
 
@@ -151,6 +169,7 @@ Create window and rootVC
     window?.makeKeyAndVisible()
 
 **singleton.codesnippet**  (singleton)  
+Language: `Obj-C`  
 Shortcut: `singleton`  
 A singleton implementation using dispatch_once
 
@@ -165,12 +184,14 @@ A singleton implementation using dispatch_once
     }
 
 **strongSelfPointer.codesnippet**  (Strong self pointer)  
+Language: `Obj-C`  
 Shortcut: `ss`  
 A strong pointer to self (for usage in blocks).
 
     __strong __typeof(weakSelf) strongSelf = weakSelf;
 
 **weakSelfPointer.codesnippet**  (Weak self pointer)  
+Language: `Obj-C`  
 Shortcut: `ws`  
 A weak pointer to self (for usage in blocks).
 
